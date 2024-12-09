@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to PinoyTravelscapes</title>
+    <link rel="stylesheet" href="css/stylesR.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="navPanel">
+        <div class="logo-button">
+            <a href="home.html">
+                <img src="imgs/logo1.png" alt="PinoyTravelscapes Logo">
+            </a>
+        </div>
+        <nav>
+            <a href="home.html"><span class="icon">🏠</span>Home</a> 
+            <a href="food.html"><span class="icon">🍴</span>Foods</a>
+            <a href="restaurant.html"><span class="icon">🍽️</span>Restaurants</a>
+            <a href="Travel.html"><span class="icon">✈️</span>Travel Destinations</a>
+            <a href="Transportation.html"><span class="icon">👥</span>Transportation</a>
+            <a href="Video.html"><span class="icon">📸</span>Videography</a>
+            <a href="about.html"><span class="icon">ℹ️</span>About Us</a>
+        </nav>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <h1>Explore Filipino Restaurants</h1>
+        <p>Find the best places to dine in the Philippines!</p>
+    </header>
+
+    <!-- Image Grid Section -->
+    <section class="image-grid" id="imageGrid">
+        <!-- JavaScript will populate this grid -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 PinoyTravelscapes | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </footer>
+
+    <!-- JavaScript to dynamically populate the grid -->
+    <script>
+        const restaurantData = [
+            { src: 'imgs/restaurant1.jpg', description: 'Manila Eats - A contemporary fusion of Filipino and international cuisine in the heart of the city.' },
+            { src: 'imgs/restaurant2.jpg', description: 'Batanes Delights - Offering breathtaking views and traditional Ivatan dishes.' },
+            { src: 'imgs/restaurant3.jpg', description: 'Seafood Haven - A paradise for seafood lovers with fresh catches every day.' },
+            { src: 'imgs/restaurant4.jpg', description: 'Mountain Grille - Experience fine dining surrounded by the majestic Cordilleras.' },
+            { src: 'imgs/restaurant5.jpg', description: 'Cebuano Flavors - Savor the authentic Lechon Cebu and other regional specialties.' },
+            { src: 'imgs/restaurant6.jpg', description: 'Luzon Bistro - Perfect for family gatherings, serving hearty meals and delectable desserts.' },
+            { src: 'imgs/restaurant7.jpg', description: 'Mindanao Feast - A showcase of vibrant and spicy flavors from Mindanao’s culinary tradition.' },
+            { src: 'imgs/restaurant8.jpg', description: 'Vegan Paradise - Indulge in plant-based Filipino classics and international dishes.' },
+            { src: 'imgs/restaurant9.jpg', description: 'Tropical Tapas - A modern take on Filipino appetizers and finger food.' }
+        ];
+
+        const imageGrid = document.getElementById('imageGrid');
+
+        restaurantData.forEach(data => {
+            const gridItem = document.createElement('div');
+            const img = document.createElement('img');
+            img.src = data.src;
+            img.alt = data.description;
+            const description = document.createElement('p');
+            description.textContent = data.description;
+
+            gridItem.appendChild(img);
+            gridItem.appendChild(description);
+            imageGrid.appendChild(gridItem);
+        });
+
+        // Sidebar functionality
+        const navPanel = document.getElementById('navPanel');
+        document.body.addEventListener('mousemove', function (event) {
+            if (event.clientX < 50) {
+                navPanel.style.transform = 'translateX(0)';
+            } else if (event.clientX > 256) {
+                navPanel.style.transform = 'translateX(-256px)';
+            }
+        });
+    </script>
+
+</body>
+</html>

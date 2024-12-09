@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PinoyTravelscapes</title>
+    <link rel="stylesheet" href="css/stylesV.css"> 
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="navPanel">
+        <div class="logo-button">
+            <a href="home.html">
+                <img src="imgs/logo1.png" alt="PinoyTravelscapes Logo">
+            </a>
+        </div>
+        <nav>
+            <a href="home.html"><span class="icon">🏠</span>Home</a> 
+            <a href="food.html"><span class="icon">🍴</span>Foods</a>
+            <a href="restaurant.html"><span class="icon">🍽️</span>Restaurants</a>
+            <a href="Travel.html"><span class="icon">✈️</span>Travel Destinations</a>
+            <a href="Transportation.html"><span class="icon">👥</span>Transportation</a>
+            <a href="Video.html"><span class="icon">📸</span>Videography</a>
+            <a href="about.html"><span class="icon">ℹ️</span>About Us</a>
+        </nav>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <h1>PinoyTravelscapes</h1>
+        <p>Discover the vibrant heart of the Philippines thru our lens!</p>
+    </header>
+
+    <!-- Video Gallery Section -->
+    <section class="video-gallery">
+        <h2>VIDEOS</h2>
+        <div class="video-section">
+            <div class="video-card">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5xccTNzYWt0?si=uYfYBlyKvHAKvG1L" frameborder="0" allow="accelerometer; autoplay; picture-in-picture" allowfullscreen></iframe>
+                <h3>Video 1</h3>
+            </div>
+            <div class="video-card">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZjFzkhrqIZs?si=O2sCdI_e0DnWCnDt" frameborder="0" allow="accelerometer; autoplay; picture-in-picture" allowfullscreen></iframe>
+                <h3>Video 2</h3>
+            </div>
+            <div class="video-card">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/lfq08YKgIDE?si=YrfMIZ8Awxsfjern" frameborder="0" allow="accelerometer; autoplay; picture-in-picture" allowfullscreen></iframe>
+                <h3>Video 3</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intermediate Video Gallery Section -->
+    <section class="video-gallery">
+        <div class="video-section">
+            <div class="video-card">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/eSUmkFPln_U?si=dwtRVXtCfUQQFWdn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h3>Video 4</h3>
+            </div>
+            <div class="video-card">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/K2Cjf8gHH3Y?si=y5VV6UZUBebC86AT" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h3>Video 5</h3>
+            </div>
+            <div class="video-card">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/GrrhjrY0ZIE?si=XCfOcEnRWyc-oxXW" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h3>Video 6</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Video Gallery Section -->
+    <section class="video-gallery">
+        <div class="video-section">
+            <div class="video-card">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RdClMXrQlTM?si=lpTTYQ3B6Sa68v6r" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h3>Video 7</h3>
+            </div>
+            <div class="video-card">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/pOvVsbN9DZg?si=zgyakN0DubEQKN9m" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h3>Video 8</h3>
+            </div>
+            <div class="video-card">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/y5vX8ZqkHaY?si=fGFhOX4Ybw0zNPI8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h3>Video 9</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 PinoyTravelscapes | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </footer>
+
+    <!-- JavaScript to handle sidebar functionality -->
+    <script>
+        // Sidebar functionality
+        const navPanel = document.getElementById('navPanel');
+        document.body.addEventListener('mousemove', function (event) {
+            if (event.clientX < 50) {
+                navPanel.style.transform = 'translateX(0)';
+            } else if (event.clientX > 256) {
+                navPanel.style.transform = 'translateX(-256px)';
+            }
+        });
+    </script>
+
+</body>
+</html>

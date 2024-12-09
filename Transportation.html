@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to PinoyTravelscapes</title>
+    <link rel="stylesheet" href="css/stylesT.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="navPanel">
+        <div class="logo-button">
+            <a href="home.html">
+                <img src="imgs/logo1.png" alt="PinoyTravelscapes Logo">
+            </a>
+        </div>
+        <nav>
+            <a href="home.html"><span class="icon">🏠</span>Home</a> 
+            <a href="food.html"><span class="icon">🍴</span>Foods</a>
+            <a href="restaurant.html"><span class="icon">🍽️</span>Restaurants</a>
+            <a href="Travel.html"><span class="icon">✈️</span>Travel Destinations</a>
+            <a href="Transportation.html"><span class="icon">👥</span>Transportation</a>
+            <a href="Video.html"><span class="icon">📸</span>Videography</a>
+            <a href="about.html"><span class="icon">ℹ️</span>About Us</a>
+        </nav>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <h1>PinoyTravelscapes</h1>
+        <p>Discover the vibrant heart of the Philippines</p>
+    </header>
+
+    <!-- Transportation Section -->
+    <section class="transportation">
+        <div class="transportation-container">
+            <!-- SUV Section -->
+            <div class="transportation-item">
+                <img src="imgs/suv.jpg" alt="SUV">
+                <p><strong>SUVs</strong> are a popular choice for groups or families traveling in the Philippines. They are spacious, comfortable, and great for longer trips. Perfect for destinations like Tagaytay and Baguio.</p>
+            </div>
+            <!-- Grab Section -->
+            <div class="transportation-item">
+                <img src="imgs/grab.png" alt="Grab">
+                <p><strong>Grab</strong> is a ride-hailing service, similar to Uber. It is widely available in the Philippines, offering both car and motorcycle services. The cost depends on the distance and demand. Grab is a convenient option for quick trips around the city or to destinations like the airport or shopping malls. Fare estimates are shown in the app, making it easy to book a ride at any time.</p>
+            </div>
+            <!-- Van Section -->
+            <div class="transportation-item">
+                <img src="imgs/van.jpg" alt="Van">
+                <p><strong>Vans</strong> are ideal for larger groups traveling together. They can accommodate more passengers than a typical car and are perfect for long trips to popular tourist destinations such as the beaches or provinces. Vans offer a more comfortable and private experience for families or friends.</p>
+            </div>
+            <!-- Jeep Section -->
+            <div class="transportation-item">
+                <img src="imgs/jeep.jpg" alt="Jeep">
+                <p><strong>Jeepneys</strong> are the iconic public transport vehicles in the Philippines. They are affordable, colorful, and a cultural symbol. Ideal for short trips around cities and towns, they offer a unique and local experience, but may be less comfortable for long distances.</p>
+            </div>
+            <!-- Sedan Section -->
+            <div class="transportation-item">
+                <img src="imgs/sedan.jpg" alt="Sedan">
+                <p><strong>Sedans</strong> are perfect for individuals or small groups who want a more private and comfortable ride. Ideal for trips around the city or short-distance travel, sedans offer a smooth ride with good fuel efficiency.</p>
+            </div>
+            <!-- Suzuki Section -->
+            <div class="transportation-item">
+                <img src="imgs/suzuki.jpg" alt="Suzuki">
+                <p><strong>Suzuki</strong> offers affordable cars, often used for short trips and city driving. Known for being fuel-efficient and easy to maneuver, Suzuki vehicles are perfect for those looking for a cost-effective and reliable option for daily travel.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 PinoyTravelscapes | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </footer>
+
+    <!-- JavaScript for sidebar functionality -->
+    <script>
+        // Sidebar functionality
+        const navPanel = document.getElementById('navPanel');
+        document.body.addEventListener('mousemove', function (event) {
+            if (event.clientX < 50) {
+                navPanel.style.transform = 'translateX(0)';
+            } else if (event.clientX > 256) {
+                navPanel.style.transform = 'translateX(-256px)';
+            }
+        });
+    </script>
+
+</body>
+</html>

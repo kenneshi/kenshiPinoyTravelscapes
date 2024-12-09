@@ -1,0 +1,132 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 256px;
+    height: 100%;
+    background-color: #004080;
+    color: white;
+    transform: translateX(-256px); /* Initially hidden */
+    transition: transform 0.3s ease;
+    padding-top: 20px;
+    z-index: 1000; /* Make sure the sidebar stays above other content */
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a {
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #6699ff;
+    border-radius: 5px;
+}
+
+/* Logo Button */
+.sidebar .logo-button {
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.sidebar .logo-button img {
+    width: 100px; /* Consistent logo size */
+    height: auto;
+    cursor: pointer;
+}
+
+/* Header */
+header {
+    background-image: url('../imgs/bg1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    margin-bottom: 50px;
+    z-index: 10; /* Ensure header stays below sidebar */
+}
+
+header h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-size: 1.4em;
+    margin: 5px 0 20px;
+}
+
+/* Vehicle Grid Section */
+.vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.vehicle-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.vehicle-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
+
+.vehicle-item h3 {
+    font-size: 1.5em;
+    padding: 15px;
+}
+
+.vehicle-item p {
+    padding: 0 15px 15px;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #002244;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1em;
+    z-index: 5; /* Ensure footer stays below sidebar */
+}
+
+footer a {
+    color: #6699ff;
+    text-decoration: underline;
+}

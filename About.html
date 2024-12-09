@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - PinoyTravelscapes</title>
+    <link rel="stylesheet" href="css/stylesA.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="navPanel">
+        <div class="logo-button">
+            <a href="home.html">
+                <img src="imgs/logo1.png" alt="PinoyTravelscapes Logo">
+            </a>
+        </div>
+        <nav>
+            <a href="home.html"><span class="icon">🏠</span>Home</a> 
+            <a href="food.html"><span class="icon">🍴</span>Foods</a>
+            <a href="restaurant.html"><span class="icon">🍽️</span>Restaurants</a>
+            <a href="Travel.html"><span class="icon">✈️</span>Travel Destinations</a>
+            <a href="Transportation.html"><span class="icon">👥</span>Travel Groups</a>
+            <a href="Video.html"><span class="icon">📸</span>Photography & Videography</a>
+            <a href="about.html"><span class="icon">ℹ️</span>About Us</a>
+        </nav>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <h1>About US</h1>
+        <p>Discover the vibrant heart of the Philippines</p>
+    </header>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <div class="about-container">
+            <h2>Welcome to PinoyTravelscapes</h2>
+            <p>At PinoyTravelscapes, we are passionate about showcasing the beauty and culture of the Philippines. From its pristine beaches to the vibrant city life, our goal is to take you on an unforgettable journey through this stunning archipelago. Whether you're a first-time visitor or a seasoned traveler, our site offers detailed guides to help you explore the must-see destinations, hidden gems, and local experiences that make the Philippines one of the most breathtaking places in the world.</p>
+
+            <h3>Our Mission</h3>
+            <p>Our mission is simple: to inspire travelers to experience the diverse landscapes, culture, and history of the Philippines. We believe that travel has the power to connect people with new perspectives and unforgettable experiences, and we want to be the bridge that helps you discover everything this amazing country has to offer.</p>
+
+            <h3>What You Can Expect</h3>
+            <p>As you explore our website, you’ll find a wealth of information to plan your next adventure in the Philippines. From travel tips and local cuisine to detailed destination guides and vibrant festival experiences, we’ve got everything you need to make your trip memorable. With a focus on authenticity, we ensure that every recommendation we offer is tailored to help you experience the Philippines in the most meaningful way possible.</p>
+
+            <h3>Join Us on the Journey</h3>
+            <p>We invite you to join us on this journey of discovery. Whether you’re looking to explore the bustling streets of Manila, relax on the beaches of Palawan, or trek through the mountains of Banaue, PinoyTravelscapes is here to guide you every step of the way. Let’s uncover the beauty of the Philippines together!</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 PinoyTravelscapes | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </footer>
+
+    <!-- JavaScript to handle sidebar and other interactions -->
+    <script>
+        // Sidebar functionality
+        const navPanel = document.getElementById('navPanel');
+        document.body.addEventListener('mousemove', function (event) {
+            if (event.clientX < 50) {
+                navPanel.style.transform = 'translateX(0)';
+            } else if (event.clientX > 256) {
+                navPanel.style.transform = 'translateX(-256px)';
+            }
+        });
+    </script>
+
+</body>
+</html>

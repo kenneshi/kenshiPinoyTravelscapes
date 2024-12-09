@@ -1,0 +1,145 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+    height: 100vh; /* Ensure body takes full height */
+    display: flex;
+    flex-direction: column; /* Flex layout for containers */
+}
+
+/* Remove underlines from all links */
+a {
+    text-decoration: none; /* Remove underline from all links globally */
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 256px;
+    height: 100%;
+    background-color: #004080;
+    color: white;
+    transform: translateX(-256px); /* Initially hidden */
+    transition: transform 0.3s ease;
+    padding-top: 20px;
+    z-index: 999;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a {
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #6699ff;
+    border-radius: 5px;
+}
+
+/* Logo Button */
+.sidebar .logo-button {
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.sidebar .logo-button img {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Header */
+header {
+    background-image: url('../imgs/bg1.jpg'); /* Ensure this image path is correct */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+header h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-size: 1.4em;
+    margin: 5px 0 20px;
+}
+
+/* Transportation Section */
+.transportation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.transportation-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px; /* Prevents stretching on very large screens */
+    margin: 0 auto;
+}
+
+.transportation-item {
+    background-color: white;
+    width: 280px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+}
+
+.transportation-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.transportation-item p {
+    font-size: 1em;
+    color: #555;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color: #002244;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1em;
+}
+
+footer a {
+    color: #6699ff;
+    text-decoration: none; /* Remove underline from footer links */
+}

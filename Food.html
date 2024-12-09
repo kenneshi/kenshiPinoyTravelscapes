@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to PinoyTravelscapes</title>
+    <link rel="stylesheet" href="css/stylesF.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="navPanel">
+        <div class="logo-button">
+            <a href="home.html">
+                <img src="imgs/logo1.png" alt="PinoyTravelscapes Logo">
+            </a>
+        </div>
+        <nav>
+            <a href="home.html"><span class="icon">🏠</span>Home</a> 
+            <a href="food.html"><span class="icon">🍴</span>Foods</a> 
+            <a href="restaurant.html"><span class="icon">🍽️</span>Restaurants</a>
+            <a href="Travel.html"><span class="icon">✈️</span>Travel Destinations</a>
+            <a href="Transportation.html"><span class="icon">👥</span>Transportation</a>
+            <a href="Video.html"><span class="icon">📸</span>Videography</a>
+            <a href="about.html"><span class="icon">ℹ️</span>About Us</a>
+        </nav>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <h1>Explore Filipino Cuisine</h1>
+        <p>Discover the flavors of the Philippines!</p>
+    </header>
+
+    <!-- Image Grid Section -->
+    <section class="image-grid" id="imageGrid">
+        <!-- JavaScript will populate this grid -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 PinoyTravelscapes | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </footer>
+
+    <!-- JavaScript to dynamically populate the grid -->
+    <script>
+        const imageData = [
+            { src: 'imgs/adobo.jpg', description: 'Adobo is a popular Filipino dish made with marinated chicken or pork cooked in soy sauce, vinegar, garlic, and spices, creating a savory and tangy flavor.' },
+            { src: 'imgs/balut.jpg', description: 'Balut is a unique Filipino street food consisting of a fertilized duck egg, typically boiled and served with salt, pepper, and vinegar.' },
+            { src: 'imgs/sinigang.jpg', description: 'Sinigang is a tangy and savory Filipino soup made with tamarind and various meats, such as pork, shrimp, or fish, often served with vegetables.' },
+            { src: 'imgs/sisig.jpg', description: 'Sisig is a sizzling Filipino dish made from chopped pig’s head, usually mixed with onions, chili peppers, and a tangy sauce, perfect for pairing with rice.' },
+            { src: 'imgs/chicharon.jpg', description: 'Chicharon is crispy fried pork skin, often served as a snack or side dish. It is crunchy, savory, and typically enjoyed with a dipping sauce.' },
+            { src: 'imgs/halohalo.jpg', description: 'Halo-halo is a famous Filipino dessert, a mixed concoction of shaved ice, sweet beans, fruits, jellies, and topped with leche flan and purple yam.' },
+            { src: 'imgs/karekare.jpg', description: 'Kare-kare is a rich Filipino stew made with oxtail, tripes, and vegetables, cooked in a peanut sauce, often served with bagoong (fermented shrimp paste).' },
+            { src: 'imgs/lechon.jpg', description: 'Lechon is a whole roasted pig, famous for its crispy skin and tender meat. It is often the centerpiece of festive occasions and celebrations.' },
+            { src: 'imgs/Lumpia.jpg', description: 'Lumpia is a Filipino spring roll, typically filled with vegetables or meat, then fried to perfection, creating a crispy and delicious treat.' },
+            { src: 'imgs/pansit.jpg', description: 'Pancit is a Filipino noodle dish, often served during celebrations. It comes in various styles, including stir-fried pancit canton or soupy pancit bihon.' },
+            { src: 'imgs/bulalo.jpg', description: 'Bulalo is a Filipino beef shank soup made with marrow bones, typically cooked in a savory broth with corn and vegetables.' },
+            { src: 'imgs/bicolexpress.jpg', description: 'Bicol Express is a spicy Filipino dish made with pork, shrimp, or fish, cooked in coconut milk and flavored with chili peppers.' }
+        ];
+
+        const imageGrid = document.getElementById('imageGrid');
+
+        imageData.forEach(data => {
+            const gridItem = document.createElement('div');
+            const img = document.createElement('img');
+            img.src = data.src;
+            img.alt = data.description;
+            const description = document.createElement('p');
+            description.textContent = data.description;
+
+            gridItem.appendChild(img);
+            gridItem.appendChild(description);
+            imageGrid.appendChild(gridItem);
+        });
+
+        // Sidebar functionality
+        const navPanel = document.getElementById('navPanel');
+        document.body.addEventListener('mousemove', function (event) {
+            if (event.clientX < 50) {
+                navPanel.style.transform = 'translateX(0)';
+            } else if (event.clientX > 256) {
+                navPanel.style.transform = 'translateX(-256px)';
+            }
+        });
+    </script>
+
+</body>
+</html>
