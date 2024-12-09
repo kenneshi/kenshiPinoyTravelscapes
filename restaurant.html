@@ -45,29 +45,35 @@
     <!-- JavaScript to dynamically populate the grid -->
     <script>
         const restaurantData = [
-            { src: 'imgs/restaurant1.jpg', description: 'Manila Eats - A contemporary fusion of Filipino and international cuisine in the heart of the city.' },
-            { src: 'imgs/restaurant2.jpg', description: 'Batanes Delights - Offering breathtaking views and traditional Ivatan dishes.' },
-            { src: 'imgs/restaurant3.jpg', description: 'Seafood Haven - A paradise for seafood lovers with fresh catches every day.' },
-            { src: 'imgs/restaurant4.jpg', description: 'Mountain Grille - Experience fine dining surrounded by the majestic Cordilleras.' },
-            { src: 'imgs/restaurant5.jpg', description: 'Cebuano Flavors - Savor the authentic Lechon Cebu and other regional specialties.' },
-            { src: 'imgs/restaurant6.jpg', description: 'Luzon Bistro - Perfect for family gatherings, serving hearty meals and delectable desserts.' },
-            { src: 'imgs/restaurant7.jpg', description: 'Mindanao Feast - A showcase of vibrant and spicy flavors from Mindanao’s culinary tradition.' },
-            { src: 'imgs/restaurant8.jpg', description: 'Vegan Paradise - Indulge in plant-based Filipino classics and international dishes.' },
-            { src: 'imgs/restaurant9.jpg', description: 'Tropical Tapas - A modern take on Filipino appetizers and finger food.' }
+            { src: 'imgs/mnl.jpg', description: 'Manila Eats - A contemporary fusion of Filipino and international cuisine in the heart of the city.' },
+            { src: 'imgs/delights.jpg', description: 'Batanes Delights - Offering breathtaking views and traditional Ivatan dishes.' },
+            { src: 'imgs/seafood.jpg', description: 'Seafood Haven - A paradise for seafood lovers with fresh catches every day.' },
+            { src: 'imgs/mount.jpg', description: 'Mountain Grille - Experience fine dining surrounded by the majestic Cordilleras.' },
+            { src: 'imgs/cravings.jpg', description: 'Cebuano Cravings - Savor the authentic Lechon Cebu and other regional specialties.' },
+            { src: 'imgs/bistro.jpg', description: 'Luzon Bistro - Perfect for family gatherings, serving hearty meals and delectable desserts.' },
+            { src: 'imgs/feast.jpg', description: 'Mindanao Feast - A showcase of vibrant and spicy flavors from Mindanao’s culinary tradition.' },
+            { src: 'imgs/vegan.png', description: 'Vegan Paradise - Indulge in plant-based Filipino classics and international dishes.' },
+            { src: 'imgs/mamou.png', description: 'Mamou - A modern take on Filipino appetizers and finger food.' }
         ];
 
         const imageGrid = document.getElementById('imageGrid');
 
         restaurantData.forEach(data => {
             const gridItem = document.createElement('div');
+            
+            const imageContainer = document.createElement('div');
             const img = document.createElement('img');
             img.src = data.src;
             img.alt = data.description;
+            imageContainer.appendChild(img);
+            
+            const textContainer = document.createElement('div');
             const description = document.createElement('p');
             description.textContent = data.description;
+            textContainer.appendChild(description);
 
-            gridItem.appendChild(img);
-            gridItem.appendChild(description);
+            gridItem.appendChild(imageContainer);
+            gridItem.appendChild(textContainer);
             imageGrid.appendChild(gridItem);
         });
 
